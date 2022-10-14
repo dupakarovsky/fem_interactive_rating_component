@@ -1,4 +1,6 @@
 import "./style.scss";
+import svgPath from "./img/illustration-thank-you.svg";
+
 document.querySelector("#app");
 /////////////////////////////////////////////////////////////////
 
@@ -10,7 +12,7 @@ document.querySelector("#app");
    // Create HTLM markup to be injected into a DIV
    function _generateMarkup(rating, total) {
       return `
-            <img src="/img/illustration-thank-you.svg" alt="thank-you" class="sr" />
+            <img id="thanks" src="${svgPath}" alt="thank-you" class="sr" />
             <p class="rating__selected">You selected ${rating} out of ${total}</p>
             <div class="rating__message centered">
                <p class="rating__header">Thank you!</p>
