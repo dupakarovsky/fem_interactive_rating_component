@@ -1,0 +1,15 @@
+// UTILITY CLASSES.
+
+.centered {
+   text-align: center;
+   transform: translateY(-1.75rem);
+}
+
+.moved-outta-view {
+   transform: translateX(0);
+   transition: transform var(--ttsep);
+}
+.moved-into-view {
+   transform: translateX(calc(-100% - var(--pad-wall)));
+   transition: transform var(--ttsep);
+}

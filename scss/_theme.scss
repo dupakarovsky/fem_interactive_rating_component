@@ -1,0 +1,23 @@
+:root {
+   /* LIGHT MODE */
+   --brand: var(--orange);
+   --surface1-light: var(--light-grey);
+
+   /* DARK MODE */
+   --brand: var(--orange);
+   --surface1-dark: var(--very-dark-blue);
+   /* COLOR MODE PREFERENCE: */
+   color-scheme: light;
+}
+@media only screen and (prefers-color-scheme: light) {
+   :root {
+      --brand: var(--orange);
+      --surface1: var(--surface1-light);
+   }
+}
+@media only screen and (prefers-color-scheme: dark) {
+   :root {
+      --brand: var(--orange);
+      --surface1: var(--surface1-dark);
+   }
+}

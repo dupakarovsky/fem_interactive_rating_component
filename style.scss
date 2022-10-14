@@ -1,0 +1,149 @@
+@use "/scss/all" as *;
+
+:root {
+   // COLORS
+   --orange: 25 97% 53%; /*hsl(25, 97%, 53%)*/
+   --white: 0 0% 100%; /*hsl(0, 0%, 100%)*/
+   --very-light-grey: 217 6% 90%; /*hsl(217, 6%, 90%) */
+   --light-grey: 217 12% 63%; /*hsl(217, 12%, 63%) */
+   --medium-grey: 216 12% 54%; /*hsl(216, 12%, 54%)*/
+   --dark-blue: 213 19% 18%; /*hsl(213, 19%, 18%)*/
+   --very-dark-blue: 216 12% 8%; /*hsl(216, 12%, 8%)*/
+   // FONT
+   --ff-primary: "Overpass", sans-serif;
+   // FONT-WEIGHT
+   --regular: 400;
+   --bold: 700;
+}
+
+body {
+   display: grid;
+   place-items: center;
+   //
+   font-family: var(--ff-primary);
+   font-size: 1.5rem;
+   background-color: hsl(var(--surface1));
+   color: hsl(var(--white));
+}
+.rating {
+   display: grid;
+   justify-items: center;
+   //
+   max-width: 41.5rem;
+   min-height: 45rem;
+   margin-inline: 2.4rem;
+   padding: 3.2rem;
+   background-image: radial-gradient(circle at center top, hsl(var(--dark-blue)) 10%, hsl(213 26% 12%));
+   border-radius: 4.15rem;
+
+   &__content {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 1.5rem;
+   }
+   &__icon-container {
+      justify-self: start;
+      //
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //
+      width: 5rem;
+      aspect-ratio: 1;
+      background-color: hsl(var(--medium-grey) / 0.35);
+      border-radius: 50%;
+   }
+   &__message {
+      display: grid;
+   }
+   &__header {
+      font-size: 2.8rem;
+   }
+   &__text {
+      color: hsl(var(--light-grey));
+   }
+   &__form {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 3rem;
+   }
+   &__numbers {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      gap: 0.5rem;
+      //
+      input[type="radio"] {
+         display: none;
+      }
+      input[type="radio"]:checked + label {
+         background-color: hsl(var(--light-grey));
+         color: var(--white);
+      }
+
+      label {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         //
+         width: 5rem;
+         aspect-ratio: 1;
+         color: hsl(var(--light-grey));
+         background-color: hsl(var(--medium-grey) / 0.35);
+         border-radius: 50%;
+         cursor: pointer;
+         // minor off center adjustment
+         padding-top: 2px;
+         padding-right: 1px;
+
+         &:hover {
+            background-color: hsl(var(--brand));
+            color: var(--white);
+         }
+      }
+   }
+   .btn {
+      font-weight: var(--bold);
+      color: hsl(var(--white));
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-color: hsl(var(--brand));
+      border: none;
+      border-radius: 100px;
+      padding-block: 1rem;
+      cursor: pointer;
+
+      &:hover {
+         background-color: hsl(var(--white));
+         color: hsl(var(--brand));
+      }
+   }
+   // ON SUBMISSION
+   &__submited {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      gap: 2rem;
+   }
+   &__selected {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //
+      max-height: 3.5rem;
+      text-align: center;
+      padding-inline: 2rem;
+      padding-block: 1.25rem;
+      border-radius: 100px;
+      background-color: hsl(var(--medium-grey) / 0.35);
+      color: hsl(var(--brand));
+   }
+}
+@media only screen and (max-width: 375px) {
+   :root {
+      font-size: 50%;
+   }
+   .rating_numbers label {
+      width: 3rem;
+   }
+}

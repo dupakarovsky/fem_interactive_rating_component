@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Frontend Mentor // Interactive Rating Component</title>
+      <link rel="icon" type="image/svg+xml" href="img/favicon-32x32.png" />
+      <link rel="stylesheet" href="style.scss" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
+
+      <script defer type="module" src="main.js"></script>
+   </head>
+
+   <body>
+      <div id="app">
+         <main class="rating">
+            <div id="content" class="rating__content">
+               <div class="rating__icon-container">
+                  <img src="/img/icon-star.svg" alt="icon" />
+               </div>
+               <div class="rating__message">
+                  <p class="rating__header">How did we do?</p>
+                  <p class="rating__text">
+                     Please se us know how we did with your support request. All feedback is appreciated to help us
+                     improve our offerings!
+                  </p>
+               </div>
+               <form id="form" class="rating__form" action="POST">
+                  <div class="rating__numbers">
+                     <input type="radio" name="rating" id="rating-1" value="1" />
+                     <label for="rating-1">1</label>
+                     <input type="radio" name="rating" id="rating-2" value="2" />
+                     <label for="rating-2">2</label>
+                     <input type="radio" name="rating" id="rating-3" value="3" />
+                     <label for="rating-3">3</label>
+                     <input type="radio" name="rating" id="rating-4" value="4" />
+                     <label for="rating-4">4</label>
+                     <input type="radio" name="rating" id="rating-5" value="5" />
+                     <label for="rating-5">5</label>
+                  </div>
+                  <button class="btn" id="submit" type="submit">submit</button>
+               </form>
+            </div>
+            <!-- <div class="rating__submited hidden"></div> -->
+         </main>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,47 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+   line-height: 1.3;
+   color: hsl(var(--text1));
+}
+
+h1 {
+   color: hsl(var(--brand));
+   font-weight: 800;
+   font-size: 4.883rem;
+}
+
+h2 {
+   color: hsl(var(--text2));
+   font-weight: 700;
+   font-size: 3.906rem;
+}
+
+h3 {
+   color: hsl(var(--text3));
+   font-weight: 600;
+   font-size: 3.135rem;
+}
+
+h4 {
+   font-weight: 500;
+   font-size: 2.5rem;
+}
+
+h5 {
+   font-weight: 400;
+   font-size: 2rem;
+}
+
+p {
+   color: hsl(var(--text1));
+   font-weight: 400;
+   font-size: 1.6rem;
+}
+
+small,
+.text_small {
+   font-size: 1.2rem;
+}
