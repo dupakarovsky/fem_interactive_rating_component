@@ -1,23 +1,75 @@
 :root {
-   /* LIGHT MODE */
-   --brand: var(--orange);
-   --surface1-light: var(--light-grey);
-
-   /* DARK MODE */
-   --brand: var(--orange);
-   --surface1-dark: var(--very-dark-blue);
    /* COLOR MODE PREFERENCE: */
    color-scheme: light;
+   /* LIGHT MODE */
+   --brand-light: 40 100% 50%;
+   --text1-light: 210 2% 10%;
+   --text2-light: 210 2% 15%;
+   --text3-light: 210 2% 20%;
+   --surface1-light: 210 2% 90%;
+   --surface2-light: 210 2% 85%;
+   --surface3-light: 210 2% 75%;
+   --surface4-light: 210 2% 65%;
+   /* DARK MODE */
+   --brand-dark: 40 100% 50%;
+   --text1-dark: 210 2% 90%;
+   --text2-dark: 210 2% 80%;
+   --text3-dark: 210 2% 75%;
+   --surface1-dark: 210 20% 10%;
+   --surface2-dark: 210 2% 15%;
+   --surface3-dark: 210 2% 25%;
+   --surface4-dark: 210 2% 35%;
 }
 @media only screen and (prefers-color-scheme: light) {
    :root {
-      --brand: var(--orange);
+      /* COLOR MODE PREFERENCE: */
+      color-scheme: light;
+      --brand: var(--brand-light);
+      --text1: var(--text1-light);
+      --text2: var(--text2-light);
+      --text3: var(--text3-light);
       --surface1: var(--surface1-light);
+      --surface2: var(--surface2-light);
+      --surface3: var(--surface3-light);
+      --surface4: var(--surface4-light);
    }
 }
 @media only screen and (prefers-color-scheme: dark) {
    :root {
-      --brand: var(--orange);
+      /* COLOR MODE PREFERENCE: */
+      color-scheme: dark;
+      --brand: var(--brand-dark);
+      --text1: var(--text1-dark);
+      --text2: var(--text2-dark);
+      --text3: var(--text3-dark);
       --surface1: var(--surface1-dark);
+      --surface2: var(--surface2-dark);
+      --surface3: var(--surface3-dark);
+      --surface4: var(--surface4-dark);
    }
+}
+
+[color-scheme="light"] {
+   /* LIGHT MODE */
+   color-scheme: light;
+   --brand: var(--brand-light);
+   --text1: var(--text1-light);
+   --text2: var(--text2-light);
+   --text3: var(--text3-light);
+   --surface1: var(--surface1-light);
+   --surface2: var(--surface2-light);
+   --surface3: var(--surface3-light);
+   --surface4: var(--surface4-light);
+}
+[color-scheme="dark"] {
+   /* DARK MODE */
+   color-scheme: dark;
+   --brand: var(--brand-dark);
+   --text1: var(--text1-dark);
+   --text2: var(--text2-dark);
+   --text3: var(--text3-dark);
+   --surface1: var(--surface1-dark);
+   --surface2: var(--surface2-dark);
+   --surface3: var(--surface3-dark);
+   --surface4: var(--surface4-dark);
 }
